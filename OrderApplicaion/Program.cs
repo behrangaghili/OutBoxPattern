@@ -15,7 +15,8 @@ var configuration = builder.Configuration;
 builder.Services.AddControllersWithViews();
 builder.Services.Configure<RabbitMQConfig>(configuration.GetSection("RabbitMQ"));
 builder.Services.AddTransient<IMessageProducer, OrderServicePublisher>();
-builder.Services.AddTransient<IOrderService, OrderService>();
+//builder.Services.AddTransient<IOrderService, OrderService>();
+ builder.Services.AddTransient<OrderService>();
 builder.Services.AddDbContext<OutBoxContext>(options =>
 {
     options.UseSqlServer(configuration.GetConnectionString("DefaultConnection"));

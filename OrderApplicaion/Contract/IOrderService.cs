@@ -1,6 +1,6 @@
-﻿namespace OrderApplicaion.Contract
-{
-    public interface IOrderService
-    {
-    }
-}
+﻿//namespace OrderApplicaion.Contract
+//{
+//    public interface IOrderService
+//    {
+//    }
+//}

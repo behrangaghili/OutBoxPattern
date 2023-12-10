@@ -7,7 +7,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace OrderApplicaion.Services
 {
-    public class OrderService : IOrderService
+    public class OrderService  
     {
         private readonly OutBoxContext _context;
         private readonly IMessageProducer _publisher;
@@ -21,7 +21,7 @@ namespace OrderApplicaion.Services
         public async Task CreateOrder(OrderModel order)
         {
             _context.Orders.Add(order);
-            await _context.SaveChangesAsync();
+           // await _context.SaveChangesAsync();
 
             var outboxEvent = new OutboxEventModel
             {
@@ -53,6 +53,8 @@ namespace OrderApplicaion.Services
 
             _context.OutboxEvents.Add(outboxEvent);
             await _context.SaveChangesAsync();
+            var messageBody = CreateRabbitMqMessageBody(order); // Ensure this method creates the desired message format
+            _publisher.Publish("order.edited", messageBody);
         }
 
         public async Task DeleteOrder(int orderId)
