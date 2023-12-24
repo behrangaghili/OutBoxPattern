@@ -2,5 +2,6 @@
 {
     Task ConnectAsync();
     Task DisconnectAsync();
-    Task PublishAsync<T>(string eventType, string subEventType, T message);
+    Task<bool> IsConnectedAsync();
+    Task PublishAsync(string eventId, string eventType, string payload);
 }

@@ -1,10 +1,8 @@
-using Microsoft.EntityFrameworkCore;
-using DispacherApplication.Models;
 //using DispacherApplication.Services;
 using DispacherApplication.Persistence;
-using RabbitMQ.Client.Core.DependencyInjection.Configuration;
-using RabbitMQ;
 using DispatcherService.Services;
+using Microsoft.EntityFrameworkCore;
+using RabbitMQ.Client.Core.DependencyInjection.Configuration;
 
 
 var builder = WebApplication.CreateBuilder(args);

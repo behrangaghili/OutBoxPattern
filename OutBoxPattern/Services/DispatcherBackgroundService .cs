@@ -11,6 +11,6 @@
 
     public async Task DispatchPendingEventsAsync(CancellationToken cancellationToken)
     {
-        // Logic to dispatch pending events
+        
     }
 }

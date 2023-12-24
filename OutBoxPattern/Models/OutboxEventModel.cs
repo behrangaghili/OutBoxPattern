@@ -8,7 +8,7 @@
         public string EventData { get; set; }
         public DateTime CreatedOn { get; set; }
         public DateTime? PublishedOn { get; set; }
-        public string? Body { get; set; }
+        public string? Payload { get; set; }
     }
 
 }
