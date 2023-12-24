@@ -1,6 +1,5 @@
-using Microsoft.EntityFrameworkCore;
+using NotificationMicroservice;
 using NotificationMicroservice.Application;
-using NotificationMicroservice.Data;
 using NotificationMicroservice.EventProcessors;
 using NotificationMicroservice.EventProcessors.Order;
 using NotificationMicroservice.EventProcessors.Tracking;
@@ -8,30 +7,19 @@ using NotificationMicroservice.Messaging;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddSingleton<IEventMessageQueue, EventMessageQueue>();
-builder.Services.AddSingleton<ITextMessageProvider, KavengarMessage>();
-builder.Services.AddSingleton<EventProcessorFactory>();
-
-builder.Services.AddTransient<IEventProcessor,OrderEventProcessor>();
-builder.Services.AddTransient<IEventProcessor,TrackingEventProcessor>();
-
-var connectionString = builder.Configuration.GetConnectionString("AppDb");
-builder.Services.AddDbContext<AppDataContext>(config =>
+builder.Services.AddTransient<IEventMessageQueue, EventMessageQueue>();
+builder.Services.AddTransient<ITextMessageProvider, KavengarMessage>();
+builder.Services.AddTransient<IEventProcessor, OrderEventProcessor>();
+builder.Services.AddTransient<IEventProcessor, TrackingEventProcessor>();
+builder.Services.AddTransient<EventProcessorFactory>();
+/*
+builder.Services.AddTransient<IEnumerable<IEventProcessor>>(provider =>
 {
-    config.UseSqlServer(connectionString);
+    return provider.GetServices<IEventProcessor>();
 });
+*/
+builder.Services.AddHostedService<EventBackgroundService>();
 
 var app = builder.Build();
-
-Task.Run(() =>
-{
-    var notifManager = app.Services.GetService<IEventMessageQueue>();
-    notifManager.Start();
-});
-
-app.MapGet("/weatherforecast", () =>
-{
-    return "ok";
-});
 
 app.Run();

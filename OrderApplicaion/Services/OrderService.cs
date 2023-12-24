@@ -27,8 +27,10 @@ namespace OrderMicroservice.Services
 
             try
             {
-                _context.Orders.Add(order);
+                order.Id = Guid.NewGuid();
 
+                _context.Orders.Add(order);
+                
                 var createOrderEvent = new OutboxEventModel
                 {
                     EventId = Guid.NewGuid(),

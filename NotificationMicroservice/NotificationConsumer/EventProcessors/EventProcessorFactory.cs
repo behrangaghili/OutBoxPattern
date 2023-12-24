@@ -2,9 +2,9 @@
 {
     public class EventProcessorFactory
     {
-        private readonly List<IEventProcessor> _processors;
+        private readonly IEnumerable<IEventProcessor> _processors;
 
-        public EventProcessorFactory(List<IEventProcessor> processors)
+        public EventProcessorFactory(IEnumerable<IEventProcessor> processors)
         {
             _processors = processors;
         }

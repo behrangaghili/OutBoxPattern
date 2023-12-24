@@ -12,7 +12,7 @@ namespace NotificationMicroservice.EventProcessors.Order
             this.textMessageProvider = textMessageProvider;
         }
 
-        public string EventType => "create_order";
+        public string EventType => "OrderCreated";
 
         public Task Process(string messageId, string subEventType, byte[] payload)
         {

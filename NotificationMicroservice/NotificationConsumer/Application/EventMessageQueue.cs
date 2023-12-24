@@ -2,21 +2,20 @@
 using NotificationMicroservice.EventProcessors;
 using RabbitMQ.Client;
 using RabbitMQ.Client.Events;
+using System.Text;
 using System.Text.Json;
 
 namespace NotificationMicroservice.Application
 {
     public class EventMessageQueue : IEventMessageQueue, IDisposable
     {
-        private const string QueueName = "notification_queue";
-        private readonly AppDataContext _db;
+        private const string QueueName = "Events";
         private readonly EventProcessorFactory eventProcessorFactory;
         private IConnection? _conn;
         private IModel? _channel;
 
-        public EventMessageQueue(AppDataContext db, EventProcessorFactory eventProcessorFactory)
+        public EventMessageQueue(EventProcessorFactory eventProcessorFactory)
         {
-            _db = db;
             this.eventProcessorFactory = eventProcessorFactory;
         }
 
@@ -32,14 +31,13 @@ namespace NotificationMicroservice.Application
 
             consumer.Received += (model, ea) =>
             {
-                var message = BinarySerializer.Deserilize<NotificationMessage>(ea.Body.ToArray());
                 var eventType = ea.BasicProperties.Headers["eventType"].ToString();
-                var subEventType = ea.BasicProperties.Headers["subEventType"].ToString();
+                
                 var messageId = ea.BasicProperties.CorrelationId;
                 var payload = ea.Body.ToArray();
 
                 var processor = eventProcessorFactory.Create(eventType);
-                processor.Process(messageId, subEventType, payload);
+                processor.Process(messageId, string.Empty, payload);
             };
 
             _channel.BasicConsume(queue: QueueName, autoAck: true, consumer: consumer);

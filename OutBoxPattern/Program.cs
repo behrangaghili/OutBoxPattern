@@ -1,8 +1,14 @@
 //using DispacherApplication.Services;
+using DispacherApplication.Broker;
 using DispacherApplication.Persistence;
+using DispacherApplication.Services;
 using DispatcherService.Services;
 using Microsoft.EntityFrameworkCore;
 using RabbitMQ.Client.Core.DependencyInjection.Configuration;
+using Serilog.Events;
+using Serilog;
+using DispacherApplication;
+using Microsoft.Extensions.DependencyInjection;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -13,23 +19,29 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 
-builder.Services.AddDbContext<OrderOutBoxContext>(options =>
+builder.Services.AddDbContextFactory<OrderOutBoxContext>(options =>
     {
         options.UseSqlServer(configuration.GetConnectionString("DefaultConnection"));
         options.EnableSensitiveDataLogging();
     });
- 
+
 
 // Add your services and repositories
- 
+
 // Add RabbitMQ and other configurations
-builder.Services.Configure<RabbitMqConnectionOptions>(builder.Configuration.GetSection("RabbitMQ"));
-//builder.Services.AddHostedService<DispatcherServices>();
-builder.Services.AddSingleton< MessageBrokerClientService>();
-builder.Services.AddSingleton<DispatcherBackgroundService>();
-builder.Services.AddSingleton<RabbitMQClientManager>();
+
+builder.Services.AddTransient<IMessageBrokerClient, MessageBrokerClientService>();
+builder.Services.AddTransient<RabbitMQClientManager>();
+builder.Services.AddTransient<IDispatcherService, OrderDispatchService>();
+builder.Services.AddHostedService<DispatcherBackgroundService>();
 
 var app = builder.Build();
+
+Log.Logger = new LoggerConfiguration()
+    .MinimumLevel.Override("Microsoft", LogEventLevel.Information)
+    .Enrich.FromLogContext()
+    .WriteTo.Console()
+    .CreateBootstrapLogger(); // <-- Change this line!
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
@@ -39,6 +51,7 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseAuthorization();
+
 
 // Global error handling middleware (optional)
 // app.UseExceptionHandler("/error");
