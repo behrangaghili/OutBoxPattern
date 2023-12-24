@@ -5,9 +5,13 @@ VisualStudioVersion = 17.8.34330.188
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NotificationApplication", "NotificationApplication\NotificationApplication.csproj", "{E3E45D28-73BB-4C7C-8A3F-971F24CD9E17}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OrderApplicaion", "OrderApplicaion\OrderApplicaion.csproj", "{0FF2C6EF-6E50-4B7F-9044-4F61C8D6E077}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OrderMicroservice", "OrderApplicaion\OrderMicroservice.csproj", "{0FF2C6EF-6E50-4B7F-9044-4F61C8D6E077}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DispacherApplication", "OutBoxPattern\DispacherApplication.csproj", "{74D196EC-3304-49FE-A204-E49229F8BC43}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NotificationMicroservice", "NotificationMicroservice\NotificationConsumer\NotificationMicroservice.csproj", "{EA5CD6C9-1233-40F4-A104-CC03F46D4FA2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Microservices", "Microservices", "{8D9BCFAA-C7C5-4D06-894E-CE7D00C33CB1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,9 +31,18 @@ Global
 		{74D196EC-3304-49FE-A204-E49229F8BC43}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{74D196EC-3304-49FE-A204-E49229F8BC43}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{74D196EC-3304-49FE-A204-E49229F8BC43}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EA5CD6C9-1233-40F4-A104-CC03F46D4FA2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA5CD6C9-1233-40F4-A104-CC03F46D4FA2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA5CD6C9-1233-40F4-A104-CC03F46D4FA2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA5CD6C9-1233-40F4-A104-CC03F46D4FA2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E3E45D28-73BB-4C7C-8A3F-971F24CD9E17} = {8D9BCFAA-C7C5-4D06-894E-CE7D00C33CB1}
+		{0FF2C6EF-6E50-4B7F-9044-4F61C8D6E077} = {8D9BCFAA-C7C5-4D06-894E-CE7D00C33CB1}
+		{EA5CD6C9-1233-40F4-A104-CC03F46D4FA2} = {8D9BCFAA-C7C5-4D06-894E-CE7D00C33CB1}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {EB6395FC-57FC-4C85-92D7-A07F4EAC3DF8}

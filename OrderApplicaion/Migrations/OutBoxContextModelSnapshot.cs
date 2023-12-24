@@ -4,13 +4,13 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using DispatcherService.Persistence;
+using OrderMicroservice.Persistence;
 
 #nullable disable
 
-namespace DispatcherService.Migrations
+namespace OrderMicroservice.Migrations
 {
-    [DbContext(typeof(OutBoxContext))]
+    [DbContext(typeof(OrderDbContext))]
     partial class OutBoxContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)

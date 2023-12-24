@@ -5,13 +5,13 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using DispatcherService.Persistence;
+using OrderMicroservice.Persistence;
 
 #nullable disable
 
-namespace DispatcherService.Migrations
+namespace OrderMicroservice.Migrations
 {
-    [DbContext(typeof(OutBoxContext))]
+    [DbContext(typeof(OrderDbContext))]
     [Migration("20231209174545_initial")]
     partial class initial
     {

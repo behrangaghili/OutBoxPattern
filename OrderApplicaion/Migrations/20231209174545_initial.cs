@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace DispatcherService.Migrations
+namespace OrderMicroservice.Migrations
 {
     public partial class initial : Migration
     {

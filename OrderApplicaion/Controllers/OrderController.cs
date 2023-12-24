@@ -5,18 +5,18 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using DispatcherService.Models;
-using DispatcherService.Persistence;
-using DispatcherService.Services;
+using OrderMicroservice.Models;
+using OrderMicroservice.Persistence;
+using OrderMicroservice.Services;
 
-namespace DispatcherService.Controllers
+namespace OrderMicroservice.Controllers
 {
     public class OrderController : Controller
     {
  
-        private readonly OrderService _orderService;
+        private readonly IOrderService _orderService;
 
-        public OrderController(OrderService orderService)
+        public OrderController(IOrderService orderService)
         {
             _orderService = orderService;
         }
@@ -54,6 +54,7 @@ namespace DispatcherService.Controllers
                 await _orderService.CreateOrder(order);
                 return RedirectToAction(nameof(Index));
             }
+
             return View(order);
         }
 
@@ -64,19 +65,6 @@ namespace DispatcherService.Controllers
             if (order == null)
             {
                 return NotFound(); 
-            }
-            return View(order);
-        }
-
-        // POST: OrderModels/Edit/5
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, OrderModel order)
-        {
-            if (ModelState.IsValid)
-            {
-                await _orderService.EditOrder(order);
-                return RedirectToAction(nameof(Index));
             }
             return View(order);
         }

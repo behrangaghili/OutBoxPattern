@@ -56,7 +56,6 @@ D:\SampleCode\Backend\C# repository\NotificationApplication\bin\Debug\net6.0\Sys
 D:\SampleCode\Backend\C# repository\NotificationApplication\bin\Debug\net6.0\System.Diagnostics.DiagnosticSource.dll
 D:\SampleCode\Backend\C# repository\NotificationApplication\bin\Debug\net6.0\System.Drawing.Common.dll
 D:\SampleCode\Backend\C# repository\NotificationApplication\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
-D:\SampleCode\Backend\C# repository\NotificationApplication\bin\Debug\net6.0\System.IO.Pipelines.dll
 D:\SampleCode\Backend\C# repository\NotificationApplication\bin\Debug\net6.0\System.Runtime.Caching.dll
 D:\SampleCode\Backend\C# repository\NotificationApplication\bin\Debug\net6.0\System.Security.Cryptography.ProtectedData.dll
 D:\SampleCode\Backend\C# repository\NotificationApplication\bin\Debug\net6.0\System.Security.Permissions.dll
