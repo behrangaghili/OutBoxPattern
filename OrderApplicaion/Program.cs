@@ -1,20 +1,20 @@
 using Microsoft.EntityFrameworkCore;
-using OrderApplicaion.Contract;
-using OrderApplicaion.Persistence;
+using DispatcherService.Contract;
+using DispatcherService.Persistence;
 using RabbitMQ.Client;
 using RabbitMQ.Client.Core.DependencyInjection.Configuration;
 using RabbitMQ;
 using System.Configuration;
-using OrderApplicaion.Services;
-using OrderApplicaion.Models;
+using DispatcherService.Services;
+using DispatcherService.Models;
 
 
 var builder = WebApplication.CreateBuilder(args);
 var configuration = builder.Configuration;
 // Add services to the container.
 builder.Services.AddControllersWithViews();
-builder.Services.Configure<RabbitMQConfig>(configuration.GetSection("RabbitMQ"));
-builder.Services.AddTransient<IMessageProducer, OrderServicePublisher>();
+builder.Services.Configure<RabbitMQConfigModel>(configuration.GetSection("RabbitMQ"));
+builder.Services.AddTransient<OrderServiceMessagePublisher>();
 //builder.Services.AddTransient<IOrderService, OrderService>();
  builder.Services.AddTransient<OrderService>();
 builder.Services.AddDbContext<OutBoxContext>(options =>

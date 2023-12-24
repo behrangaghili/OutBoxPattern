@@ -4,11 +4,11 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using OrderApplicaion.Persistence;
+using DispatcherService.Persistence;
 
 #nullable disable
 
-namespace OrderApplicaion.Migrations
+namespace DispatcherService.Migrations
 {
     [DbContext(typeof(OutBoxContext))]
     partial class OutBoxContextModelSnapshot : ModelSnapshot
@@ -80,6 +80,9 @@ namespace OrderApplicaion.Migrations
                     b.Property<DateTime?>("PublishedOn")
                         .HasColumnType("datetime2");
 
+                    b.Property<string>("body")
+                        .HasColumnType("nvarchar(max)");
+
                     b.HasKey("Id");
 
                     b.ToTable("OutboxEvents");
@@ -88,18 +91,20 @@ namespace OrderApplicaion.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedOn = new DateTime(2023, 12, 9, 17, 45, 45, 643, DateTimeKind.Utc).AddTicks(6343),
+                            CreatedOn = new DateTime(2023, 12, 10, 17, 6, 5, 263, DateTimeKind.Utc).AddTicks(462),
                             EventData = "EventData1",
-                            EventId = new Guid("599fff65-d76c-4063-b911-2689cea5ec7b"),
-                            EventType = "Event1"
+                            EventId = new Guid("fcc465d2-76a2-41e4-b3fa-df0544b8fab6"),
+                            EventType = "Event1",
+                            body = "message1"
                         },
                         new
                         {
                             Id = 2,
-                            CreatedOn = new DateTime(2023, 12, 9, 17, 45, 45, 643, DateTimeKind.Utc).AddTicks(6346),
+                            CreatedOn = new DateTime(2023, 12, 10, 17, 6, 5, 263, DateTimeKind.Utc).AddTicks(467),
                             EventData = "EventData2",
-                            EventId = new Guid("1d6adf1a-57e3-41d0-8011-03e9b1bce8f6"),
-                            EventType = "Event2"
+                            EventId = new Guid("cf190122-a772-4015-985b-43f6c4849438"),
+                            EventType = "Event2",
+                            body = "message2"
                         });
                 });
 #pragma warning restore 612, 618

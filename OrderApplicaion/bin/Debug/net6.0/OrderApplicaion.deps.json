@@ -17,8 +17,9 @@
           "Microsoft.Extensions.DependencyInjection": "8.0.0",
           "Microsoft.Extensions.Logging": "8.0.0",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "6.0.16",
-          "RabbitMQ.Client": "7.0.0-alpha.1",
-          "RabbitMQ.Client.Core.DependencyInjection": "5.0.0"
+          "RabbitMQ.Client": "6.8.0",
+          "RabbitMQ.Client.Core.DependencyInjection": "5.0.0",
+          "System.Memory": "4.5.5"
         },
         "runtime": {
           "OrderApplicaion.dll": {}
@@ -997,7 +998,7 @@
           "Microsoft.Bcl.AsyncInterfaces": "5.0.0",
           "Microsoft.CodeAnalysis.Common": "4.0.0",
           "System.Composition": "1.0.31",
-          "System.IO.Pipelines": "8.0.0"
+          "System.IO.Pipelines": "5.0.1"
         },
         "runtime": {
           "lib/netcoreapp3.1/Microsoft.CodeAnalysis.Workspaces.dll": {
@@ -1714,16 +1715,15 @@
           }
         }
       },
-      "RabbitMQ.Client/7.0.0-alpha.1": {
+      "RabbitMQ.Client/6.8.0": {
         "dependencies": {
-          "System.IO.Pipelines": "8.0.0",
           "System.Memory": "4.5.5",
-          "System.Threading.Channels": "8.0.0"
+          "System.Threading.Channels": "7.0.0"
         },
         "runtime": {
-          "lib/net6.0/RabbitMQ.Client.dll": {
-            "assemblyVersion": "7.0.0.0",
-            "fileVersion": "7.0.0.0"
+          "lib/netstandard2.0/RabbitMQ.Client.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.8.0.0"
           }
         }
       },
@@ -1733,7 +1733,7 @@
           "Microsoft.Extensions.Hosting.Abstractions": "3.1.12",
           "Microsoft.Extensions.Logging": "8.0.0",
           "Newtonsoft.Json": "13.0.1",
-          "RabbitMQ.Client": "7.0.0-alpha.1"
+          "RabbitMQ.Client": "6.8.0"
         },
         "runtime": {
           "lib/netstandard2.1/RabbitMQ.Client.Core.DependencyInjection.dll": {
@@ -2252,14 +2252,7 @@
           "System.Runtime": "4.3.0"
         }
       },
-      "System.IO.Pipelines/8.0.0": {
-        "runtime": {
-          "lib/net6.0/System.IO.Pipelines.dll": {
-            "assemblyVersion": "8.0.0.0",
-            "fileVersion": "8.0.23.53103"
-          }
-        }
-      },
+      "System.IO.Pipelines/5.0.1": {},
       "System.Linq/4.3.0": {
         "dependencies": {
           "System.Collections": "4.3.0",
@@ -2673,11 +2666,11 @@
           "System.Threading.Tasks": "4.3.0"
         }
       },
-      "System.Threading.Channels/8.0.0": {
+      "System.Threading.Channels/7.0.0": {
         "runtime": {
           "lib/net6.0/System.Threading.Channels.dll": {
-            "assemblyVersion": "8.0.0.0",
-            "fileVersion": "8.0.23.53103"
+            "assemblyVersion": "7.0.0.0",
+            "fileVersion": "7.0.22.51805"
           }
         }
       },
@@ -3634,12 +3627,12 @@
       "path": "nuget.versioning/6.6.1",
       "hashPath": "nuget.versioning.6.6.1.nupkg.sha512"
     },
-    "RabbitMQ.Client/7.0.0-alpha.1": {
+    "RabbitMQ.Client/6.8.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-vJpshc/+siWYB6G2SfjbBY/YsnpeEtjDPe53q+9zvqSUiiMfi4Ya/fiQsK5gutQlsVV6y5Oh8dA162Ydt0ZVMQ==",
-      "path": "rabbitmq.client/7.0.0-alpha.1",
-      "hashPath": "rabbitmq.client.7.0.0-alpha.1.nupkg.sha512"
+      "sha512": "sha512-eO4W73DUQMbgw5wcnf+6gj8fyQQlRZG2XYsIext0ajDDdggqJGvMmR8JvywHpInEOzC8q0bEdDWU+oLJ7ccyxw==",
+      "path": "rabbitmq.client/6.8.0",
+      "hashPath": "rabbitmq.client.6.8.0.nupkg.sha512"
     },
     "RabbitMQ.Client.Core.DependencyInjection/5.0.0": {
       "type": "package",
@@ -3984,12 +3977,12 @@
       "path": "system.io.filesystem.primitives/4.3.0",
       "hashPath": "system.io.filesystem.primitives.4.3.0.nupkg.sha512"
     },
-    "System.IO.Pipelines/8.0.0": {
+    "System.IO.Pipelines/5.0.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-FHNOatmUq0sqJOkTx+UF/9YK1f180cnW5FVqnQMvYUN0elp6wFzbtPSiqbo1/ru8ICp43JM1i7kKkk6GsNGHlA==",
-      "path": "system.io.pipelines/8.0.0",
-      "hashPath": "system.io.pipelines.8.0.0.nupkg.sha512"
+      "sha512": "sha512-qEePWsaq9LoEEIqhbGe6D5J8c9IqQOUuTzzV6wn1POlfdLkJliZY3OlB0j0f17uMWlqZYjH7txj+2YbyrIA8Yg==",
+      "path": "system.io.pipelines/5.0.1",
+      "hashPath": "system.io.pipelines.5.0.1.nupkg.sha512"
     },
     "System.Linq/4.3.0": {
       "type": "package",
@@ -4299,12 +4292,12 @@
       "path": "system.threading/4.3.0",
       "hashPath": "system.threading.4.3.0.nupkg.sha512"
     },
-    "System.Threading.Channels/8.0.0": {
+    "System.Threading.Channels/7.0.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-CMaFr7v+57RW7uZfZkPExsPB6ljwzhjACWW1gfU35Y56rk72B/Wu+sTqxVmGSk4SFUlPc3cjeKND0zktziyjBA==",
-      "path": "system.threading.channels/8.0.0",
-      "hashPath": "system.threading.channels.8.0.0.nupkg.sha512"
+      "sha512": "sha512-qmeeYNROMsONF6ndEZcIQ+VxR4Q/TX/7uIVLJqtwIWL7dDWeh0l1UIqgo4wYyjG//5lUNhwkLDSFl+pAWO6oiA==",
+      "path": "system.threading.channels/7.0.0",
+      "hashPath": "system.threading.channels.7.0.0.nupkg.sha512"
     },
     "System.Threading.Tasks/4.3.0": {
       "type": "package",

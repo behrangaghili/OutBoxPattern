@@ -1,4 +1,4 @@
-namespace OrderApplicaion.Models
+namespace DispatcherService.Models
 {
     public class ErrorViewModel
     {

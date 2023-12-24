@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "1GYBdBTHOOLfPsFuyyUc4z/Vd1TNLm4EHaf+RevxdADtxQz9DdEJtUolbMWQxrWOxFXRLaTzQ8DZe13arxKWvg==",
+  "dgSpecHash": "p7VvIrES9z+nYVMP5p7UO1NrMrMc4i9kb6NySxOg+WxNkUW9d5XMDXmc8iYqYAJI0qJu09fXgXGy+9xWcDvigg==",
   "success": true,
   "projectFilePath": "D:\\SampleCode\\Backend\\C# repository\\NotificationApplication\\NotificationApplication.csproj",
   "expectedPackageFiles": [
@@ -36,14 +36,13 @@
     "C:\\Users\\BehrangLabtop\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
     "C:\\Users\\BehrangLabtop\\.nuget\\packages\\microsoft.win32.systemevents\\4.7.0\\microsoft.win32.systemevents.4.7.0.nupkg.sha512",
     "C:\\Users\\BehrangLabtop\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
-    "C:\\Users\\BehrangLabtop\\.nuget\\packages\\rabbitmq.client\\7.0.0-alpha.1\\rabbitmq.client.7.0.0-alpha.1.nupkg.sha512",
+    "C:\\Users\\BehrangLabtop\\.nuget\\packages\\rabbitmq.client\\6.8.0\\rabbitmq.client.6.8.0.nupkg.sha512",
     "C:\\Users\\BehrangLabtop\\.nuget\\packages\\rabbitmq.client.core.dependencyinjection\\5.0.0\\rabbitmq.client.core.dependencyinjection.5.0.0.nupkg.sha512",
     "C:\\Users\\BehrangLabtop\\.nuget\\packages\\system.collections.immutable\\6.0.0\\system.collections.immutable.6.0.0.nupkg.sha512",
     "C:\\Users\\BehrangLabtop\\.nuget\\packages\\system.configuration.configurationmanager\\4.7.0\\system.configuration.configurationmanager.4.7.0.nupkg.sha512",
     "C:\\Users\\BehrangLabtop\\.nuget\\packages\\system.diagnostics.diagnosticsource\\6.0.1\\system.diagnostics.diagnosticsource.6.0.1.nupkg.sha512",
     "C:\\Users\\BehrangLabtop\\.nuget\\packages\\system.drawing.common\\4.7.0\\system.drawing.common.4.7.0.nupkg.sha512",
     "C:\\Users\\BehrangLabtop\\.nuget\\packages\\system.identitymodel.tokens.jwt\\6.8.0\\system.identitymodel.tokens.jwt.6.8.0.nupkg.sha512",
-    "C:\\Users\\BehrangLabtop\\.nuget\\packages\\system.io.pipelines\\8.0.0\\system.io.pipelines.8.0.0.nupkg.sha512",
     "C:\\Users\\BehrangLabtop\\.nuget\\packages\\system.memory\\4.5.5\\system.memory.4.5.5.nupkg.sha512",
     "C:\\Users\\BehrangLabtop\\.nuget\\packages\\system.runtime.caching\\4.7.0\\system.runtime.caching.4.7.0.nupkg.sha512",
     "C:\\Users\\BehrangLabtop\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
@@ -53,7 +52,7 @@
     "C:\\Users\\BehrangLabtop\\.nuget\\packages\\system.security.permissions\\4.7.0\\system.security.permissions.4.7.0.nupkg.sha512",
     "C:\\Users\\BehrangLabtop\\.nuget\\packages\\system.security.principal.windows\\4.7.0\\system.security.principal.windows.4.7.0.nupkg.sha512",
     "C:\\Users\\BehrangLabtop\\.nuget\\packages\\system.text.encoding.codepages\\4.7.0\\system.text.encoding.codepages.4.7.0.nupkg.sha512",
-    "C:\\Users\\BehrangLabtop\\.nuget\\packages\\system.threading.channels\\8.0.0\\system.threading.channels.8.0.0.nupkg.sha512",
+    "C:\\Users\\BehrangLabtop\\.nuget\\packages\\system.threading.channels\\7.0.0\\system.threading.channels.7.0.0.nupkg.sha512",
     "C:\\Users\\BehrangLabtop\\.nuget\\packages\\system.windows.extensions\\4.7.0\\system.windows.extensions.4.7.0.nupkg.sha512"
   ],
   "logs": []

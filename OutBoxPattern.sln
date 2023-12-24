@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NotificationApplication", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OrderApplicaion", "OrderApplicaion\OrderApplicaion.csproj", "{0FF2C6EF-6E50-4B7F-9044-4F61C8D6E077}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OutBoxPattern", "OutBoxPattern\OutBoxPattern.csproj", "{74D196EC-3304-49FE-A204-E49229F8BC43}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DispacherApplication", "OutBoxPattern\DispacherApplication.csproj", "{74D196EC-3304-49FE-A204-E49229F8BC43}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

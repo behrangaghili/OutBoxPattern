@@ -70,7 +70,6 @@ D:\SampleCode\Backend\C# repository\OrderApplicaion\obj\Debug\net6.0\OrderApplic
 D:\SampleCode\Backend\C# repository\OrderApplicaion\obj\Debug\net6.0\ref\OrderApplicaion.dll
 D:\SampleCode\Backend\C# repository\OrderApplicaion\bin\Debug\net6.0\RabbitMQ.Client.Core.DependencyInjection.dll
 D:\SampleCode\Backend\C# repository\OrderApplicaion\bin\Debug\net6.0\System.Diagnostics.DiagnosticSource.dll
-D:\SampleCode\Backend\C# repository\OrderApplicaion\bin\Debug\net6.0\System.IO.Pipelines.dll
 D:\SampleCode\Backend\C# repository\OrderApplicaion\bin\Debug\net6.0\MessagePack.dll
 D:\SampleCode\Backend\C# repository\OrderApplicaion\bin\Debug\net6.0\MessagePack.Annotations.dll
 D:\SampleCode\Backend\C# repository\OrderApplicaion\bin\Debug\net6.0\Microsoft.AspNetCore.Razor.Language.dll

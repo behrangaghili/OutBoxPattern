@@ -1,8 +1,8 @@
-﻿using global::OrderApplicaion.Models;
+﻿using global::DispatcherService.Models;
 using Microsoft.EntityFrameworkCore;
 using System;
 
-namespace OrderApplicaion.Persistence
+namespace DispatcherService.Persistence
 {
     public class OutBoxContext : DbContext
     {
@@ -26,8 +26,8 @@ namespace OrderApplicaion.Persistence
 
             // Seed data for OutboxEvents
             modelBuilder.Entity<OutboxEventModel>().HasData(
-                new OutboxEventModel { Id = 1, EventId = Guid.NewGuid(), EventType = "Event1", EventData = "EventData1", CreatedOn = DateTime.UtcNow },
-                new OutboxEventModel { Id = 2, EventId = Guid.NewGuid(), EventType = "Event2", EventData = "EventData2", CreatedOn = DateTime.UtcNow }
+                new OutboxEventModel { Id = 1, EventId = Guid.NewGuid(), EventType = "Event1", EventData = "EventData1", CreatedOn = DateTime.UtcNow, Body="message1" },
+                new OutboxEventModel { Id = 2, EventId = Guid.NewGuid(), EventType = "Event2", EventData = "EventData2", CreatedOn = DateTime.UtcNow, Body = "message2" }
                 // Add more seed data as required
             );
         }

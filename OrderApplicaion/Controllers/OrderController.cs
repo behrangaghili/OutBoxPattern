@@ -5,11 +5,11 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using OrderApplicaion.Models;
-using OrderApplicaion.Persistence;
-using OrderApplicaion.Services;
+using DispatcherService.Models;
+using DispatcherService.Persistence;
+using DispatcherService.Services;
 
-namespace OrderApplicaion.Controllers
+namespace DispatcherService.Controllers
 {
     public class OrderController : Controller
     {

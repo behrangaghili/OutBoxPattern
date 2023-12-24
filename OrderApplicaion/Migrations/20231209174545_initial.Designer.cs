@@ -5,11 +5,11 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using OrderApplicaion.Persistence;
+using DispatcherService.Persistence;
 
 #nullable disable
 
-namespace OrderApplicaion.Migrations
+namespace DispatcherService.Migrations
 {
     [DbContext(typeof(OutBoxContext))]
     [Migration("20231209174545_initial")]

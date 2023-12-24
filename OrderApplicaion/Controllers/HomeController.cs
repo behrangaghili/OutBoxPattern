@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using OrderApplicaion.Models;
+using DispatcherService.Models;
 using System.Diagnostics;
 
-namespace OrderApplicaion.Controllers
+namespace DispatcherService.Controllers
 {
     public class HomeController : Controller
     {

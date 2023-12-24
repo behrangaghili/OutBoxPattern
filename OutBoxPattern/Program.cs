@@ -1,10 +1,10 @@
 using Microsoft.EntityFrameworkCore;
-using OutBoxPattern.Contract;
-using OutBoxPattern.Persistence.OutBoxPattern.Data;
-using OutBoxPattern.Services;
-using RabbitMQ.Client;
+using DispacherApplication.Models;
+//using DispacherApplication.Services;
+using DispacherApplication.Persistence;
 using RabbitMQ.Client.Core.DependencyInjection.Configuration;
 using RabbitMQ;
+using DispatcherService.Services;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -15,32 +15,21 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 
-builder.Services.AddDbContext<OutBoxContext>(options =>
+builder.Services.AddDbContext<OrderOutBoxContext>(options =>
     {
         options.UseSqlServer(configuration.GetConnectionString("DefaultConnection"));
         options.EnableSensitiveDataLogging();
     });
-
-
-
-// Add Interaces
-builder.Services.AddTransient<IEmailClient>();
-builder.Services.AddTransient<IMessageConsumer>();
-builder.Services.AddTransient<IMessageProducer>();
-builder.Services.AddTransient<IOrderOutboxRepository>();
-builder.Services.AddTransient<IOrderRepository>();
-builder.Services.AddTransient<IOrderService>();
-
+ 
 
 // Add your services and repositories
-builder.Services.AddHostedService<MessageBrokerService>();
-//builder.Services.AddTransient<NotificationConsumer>();
-builder.Services.AddTransient<NotificationService>();
-builder.Services.AddTransient<OrderService>();
-builder.Services.AddTransient<OrderServicePublisher>();
-
+ 
 // Add RabbitMQ and other configurations
- builder.Services.Configure<RabbitMqConnectionOptions>(builder.Configuration.GetSection("RabbitMQ"));
+builder.Services.Configure<RabbitMqConnectionOptions>(builder.Configuration.GetSection("RabbitMQ"));
+//builder.Services.AddHostedService<DispatcherServices>();
+builder.Services.AddSingleton< MessageBrokerClientService>();
+builder.Services.AddSingleton<DispatcherBackgroundService>();
+builder.Services.AddSingleton<RabbitMQClientManager>();
 
 var app = builder.Build();
 

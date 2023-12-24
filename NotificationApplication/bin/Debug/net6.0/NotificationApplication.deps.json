@@ -16,7 +16,8 @@
           "Microsoft.Extensions.DependencyInjection": "8.0.0",
           "Microsoft.Extensions.Logging": "8.0.0",
           "RabbitMQ.Client": "7.0.0-alpha.1",
-          "RabbitMQ.Client.Core.DependencyInjection": "5.0.0"
+          "RabbitMQ.Client.Core.DependencyInjection": "5.0.0",
+          "System.Memory": "4.5.5"
         },
         "runtime": {
           "NotificationApplication.dll": {}

@@ -22,8 +22,9 @@
     <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="8.0.0" />
     <PackageReference Include="Microsoft.Extensions.Logging" Version="8.0.0" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.16" />
-    <PackageReference Include="RabbitMQ.Client" Version="7.0.0-alpha.1" />
+    <PackageReference Include="RabbitMQ.Client" Version="6.8.0" />
     <PackageReference Include="RabbitMQ.Client.Core.DependencyInjection" Version="5.0.0" />
+    <PackageReference Include="System.Memory" Version="4.5.5" />
   </ItemGroup>
 
 </Project>
