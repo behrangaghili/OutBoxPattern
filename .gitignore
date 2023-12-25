@@ -175,7 +175,13 @@ DocProject/Help/*.hhk
 DocProject/Help/*.hhp
 DocProject/Help/Html2
 DocProject/Help/html
-
+# exclude everything
+DispacherApplication/bin/
+OrderApplicaion/bin/
+NotificationApplicaion/bin
+DispacherApplication/obj/
+OrderApplicaion/obj/
+NotificationApplicaion/obj/
 # Click-Once directory
 publish/
 

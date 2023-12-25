@@ -11313,19 +11313,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\BEHRANG\\.nuget\\packages\\": {}
+    "C:\\Users\\BehrangLabtop\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\SampleCode\\Backend\\C# repository\\OutBoxPattern\\OrderApplicaion\\OrderMicroservice.csproj",
+      "projectUniqueName": "C:\\Users\\BehrangLabtop\\Desktop\\git\\OrderApplicaion\\OrderMicroservice.csproj",
       "projectName": "OrderMicroservice",
-      "projectPath": "D:\\SampleCode\\Backend\\C# repository\\OutBoxPattern\\OrderApplicaion\\OrderMicroservice.csproj",
-      "packagesPath": "C:\\Users\\BEHRANG\\.nuget\\packages\\",
-      "outputPath": "D:\\SampleCode\\Backend\\C# repository\\OutBoxPattern\\OrderApplicaion\\obj\\",
+      "projectPath": "C:\\Users\\BehrangLabtop\\Desktop\\git\\OrderApplicaion\\OrderMicroservice.csproj",
+      "packagesPath": "C:\\Users\\BehrangLabtop\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\BehrangLabtop\\Desktop\\git\\OrderApplicaion\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
       "configFilePaths": [
-        "C:\\Users\\BEHRANG\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\BehrangLabtop\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -11411,24 +11415,6 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "downloadDependencies": [
-          {
-            "name": "Microsoft.AspNetCore.App.Ref",
-            "version": "[6.0.25, 6.0.25]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Host.win-x64",
-            "version": "[6.0.25, 6.0.25]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Ref",
-            "version": "[6.0.25, 6.0.25]"
-          },
-          {
-            "name": "Microsoft.WindowsDesktop.App.Ref",
-            "version": "[6.0.25, 6.0.25]"
-          }
-        ],
         "frameworkReferences": {
           "Microsoft.AspNetCore.App": {
             "privateAssets": "none"
